@@ -3,11 +3,12 @@ import 'package:islame_project_session_6/Core/String_manger.dart';
 import 'package:islame_project_session_6/Core/assests_manger.dart';
 import 'package:islame_project_session_6/Core/colors_manager.dart';
 
+import 'tabs/Hadith/Headeath.dart';
 import 'tabs/Quran_Tab/Quran.dart';
 import 'tabs/Radio_Tab/Radio.dart';
 import 'tabs/Sabha_Tap/Sabha.dart';
 import 'tabs/Settings/Settings.dart';
-import 'tabs/hadeath/Headeath.dart';
+
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
