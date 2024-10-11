@@ -13,5 +13,7 @@ class AssestsImages {
   static const String Logo_light_Splashe = '${base}bg_Light_logo2.png';
 
   static const String back_gound_Splashe = '${base}bg_light@3x-1.jpg';
+  static const String Hadith_header_icon = '${base}hadeth_logo@3x.png';
+
   static const String Quran_header = '${base}qur2an_Header_image@2x.png';
 }
