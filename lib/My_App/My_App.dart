@@ -5,6 +5,8 @@ import 'package:islame_project_session_6/Presention/Moduels/Home_Moudel/Screens/
 import 'package:islame_project_session_6/Presention/Moduels/Home_Moudel/Screens/Splashe/Splash.dart';
 import 'package:islame_project_session_6/config/Theme/My_Theme.dart';
 
+import '../Presention/Moduels/Home_Moudel/Screens/Hadith_Details/Hadith_Details.dart';
+
 class MyApp extends StatelessWidget {
  const MyApp({super.key});
 
@@ -17,9 +19,12 @@ class MyApp extends StatelessWidget {
       routes: {
         RouteManger.Home_route: (context) => HomeScreen(),
         RouteManger.Splashe_route: (context) => Splashe(),
-        RouteManger.Quran_DetailsScreen_route: (context) => QuranDetailsScreen()
+        RouteManger.Quran_DetailsScreen_route: (context) => QuranDetailsScreen(),
+        RouteManger.Hadith_DetailsScreen_route: (context) => HadithDetailsScreen()
       },
       initialRoute: RouteManger.Splashe_route,
     );
   }
 }
+
+
