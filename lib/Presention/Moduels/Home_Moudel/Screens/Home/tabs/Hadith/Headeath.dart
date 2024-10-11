@@ -52,10 +52,10 @@ List<Hadith>HadithList=[];
     List<String>Hadith_ITem_List = fileContant.trim().split('#');
     for (int i = 0; i < Hadith_ITem_List.length; i++) {
       String Hadith_Item = Hadith_ITem_List[i];
-      List<String>Hadith_Lines = Hadith_Item.trim().split('/n');
+      List<String>Hadith_Lines = Hadith_Item.trim().split('\n');
       String title = Hadith_Lines[0];
       Hadith_Lines.removeAt(0);
-      String Contant = Hadith_Lines.join('/n');
+      String Contant = Hadith_Lines.join('\n');
       Hadith hadith=Hadith(title: title, contant: Contant);
       HadithList.add(hadith);
     }
