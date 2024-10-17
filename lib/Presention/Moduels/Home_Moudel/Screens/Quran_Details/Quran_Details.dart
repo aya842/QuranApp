@@ -50,7 +50,7 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
   void readQuranFile(int index) async {
     String fileContact =
         await rootBundle.loadString('assets/files/${index}.txt'); //block
-    List<String> SuraLinesList = fileContact.trim().split('/n');
+    List<String> SuraLinesList = fileContact.trim().split('\n');
     SuraLinesList.forEach(
       (element) {
         print(element);

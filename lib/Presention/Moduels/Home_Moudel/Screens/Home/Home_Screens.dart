@@ -22,8 +22,9 @@ class _HomeScreenState extends State<HomeScreen> {
     Quran(),
     Headeah(),
     Sabha(),
-    Settings(),
     RadioTap(),
+    Settings(),
+
   ];
 
   int Selected_Tap = 0;

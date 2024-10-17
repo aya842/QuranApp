@@ -32,7 +32,23 @@ class My_Theme {
         elevation: 14,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
       ),
+      bottomSheetTheme:BottomSheetThemeData (
+        elevation: 12,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(10),
+            topRight: Radius.circular(20),
+          ),
+
+
+        ),
+        backgroundColor: colorsManger.gold_color
+
+      ),
       textTheme: const TextTheme(
+        displayMedium:  TextStyle(fontWeight: FontWeight.normal,fontSize: 16,color: Colors.white),
+        labelSmall:  TextStyle(fontSize: 19,color: colorsManger.gold_color),
+        labelMedium: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: colorsManger.gold_color,),
           headlineMedium: TextStyle(
               fontSize: 21,
               fontWeight: FontWeight.w500,
@@ -45,4 +61,5 @@ class My_Theme {
               fontWeight: FontWeight.w500,
               fontSize: 20,
               color: Color(0xFF242424))));
+
 }

@@ -15,6 +15,7 @@ class TitleWidget extends StatelessWidget {
           arguments: hadith,
         );
       },
+
       child: Container(
         alignment: Alignment.center,
         padding: EdgeInsets.symmetric(vertical: 4, horizontal: 6),

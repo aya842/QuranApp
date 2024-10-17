@@ -37,6 +37,7 @@ List<Hadith>HadithList=[];
               separatorBuilder:(context,index)=> Divider(
                 color: Theme.of(context).dividerColor,
                 thickness: 8,
+
               ),
               itemCount: HadithList.length,),
           )
