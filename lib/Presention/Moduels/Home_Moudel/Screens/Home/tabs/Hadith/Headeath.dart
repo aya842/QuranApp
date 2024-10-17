@@ -30,9 +30,9 @@ List<Hadith>HadithList=[];
             flex: 3,
             child:
             HadithList.isEmpty?
-            Center(child: CircularProgressIndicator(color: Theme.of(context).primaryColor,)):
-            ListView.separated(itemBuilder: ((context, index) =>
-                TitleWidget(hadith: HadithList[index])
+            Center(child: CircularProgressIndicator(color: Theme.of(context).primaryColor,)): ListView.separated(
+                    itemBuilder: ((context, index) =>
+                        TitleWidget(hadith: HadithList[index])
             ),
               separatorBuilder:(context,index)=> Divider(
                 color: Theme.of(context).dividerColor,
