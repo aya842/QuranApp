@@ -16,6 +16,6 @@ class AssestsImages {
   static const String Hadith_header_icon = '${base}hadeth_logo@3x.png';
 
   static const String Quran_header = '${base}qur2an_Header_image@2x.png';
-  static const String Sbha_Body = '${base}body_sebha_logo@2x.png';
   static const String Sbha_Header = '${base}head_sebha_logo@3x.png';
+  static const String Sbha_Body = '${base}body_sebha_logo@3x.png';
 }

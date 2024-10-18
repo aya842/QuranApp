@@ -1,3 +1,4 @@
+import 'dart:io' show Platform;
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:islame_project_session_6/Core/assests_manger.dart';
@@ -33,7 +34,7 @@ class _SabhaState extends State<Sabha> with SingleTickerProviderStateMixin {
     setState(() {
       tasbihCount += 1;
     });
-    _controller.forward(from: 0.0);
+    _controller.forward(from: 0.0); // Reset animation and start rotating
   }
 
   @override
@@ -42,26 +43,26 @@ class _SabhaState extends State<Sabha> with SingleTickerProviderStateMixin {
       body: Column(
         children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.5,
+            height: MediaQuery.of(context).size.height * 0.5, // Set the height for the Stack
             child: Stack(
-              alignment: Alignment.center,
+              alignment: Alignment.center, // Aligns elements at the center
               children: [
                 Positioned(
-                  top: 20,
+                  top: 20, // Adjust to move the header up or down
                   child: Image.asset(
                     AssestsImages.Sbha_Header,
-                    width: MediaQuery.of(context).size.width * 0.2,
-                    height: MediaQuery.of(context).size.height * 0.2,
+                    width: MediaQuery.of(context).size.width * 0.2, // Adjusts the width relative to screen size
+                    height: MediaQuery.of(context).size.height * 0.2, // Relative height
                   ),
                 ),
                 Positioned(
-                  top: 100,
+                  top: 100, // Adjust to move the body down
                   child: RotationTransition(
                     turns: Tween(begin: 0.0, end: 1.0).animate(_controller), // Rotate on button press
                     child: Image.asset(
                       AssestsImages.Sbha_Body,
-                      width: MediaQuery.of(context).size.width * 0.6,
-                      height: MediaQuery.of(context).size.height * 0.3,
+                      width: MediaQuery.of(context).size.width * 0.6, // Relative width for better scaling
+                      height: MediaQuery.of(context).size.height * 0.3, // Relative height
                     ),
                   ),
                 ),
@@ -79,17 +80,19 @@ class _SabhaState extends State<Sabha> with SingleTickerProviderStateMixin {
             alignment: Alignment.center,
             width: 40,
             height: 60,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.rectangle,
-              color: const Color(0xFFB1914F),
+              color: Color(0xFFB1914F), // Fixed color assignment
             ),
-            child: Text('$tasbihCount'),
+            child: Text('$tasbihCount'), // Displays current count
           ),
+
           const SizedBox(height: 20),
+
           ElevatedButton(
-            onPressed: _incrementTasbih,
+            onPressed: _incrementTasbih, // Calls increment function
             style: ElevatedButton.styleFrom(
-              backgroundColor: colorsManger.gold_color,
+              backgroundColor: colorsManger.gold_color, // Use your defined color
             ),
             child: const Text(
               'سبحان الله',
@@ -101,4 +104,5 @@ class _SabhaState extends State<Sabha> with SingleTickerProviderStateMixin {
     );
   }
 }
+
 
