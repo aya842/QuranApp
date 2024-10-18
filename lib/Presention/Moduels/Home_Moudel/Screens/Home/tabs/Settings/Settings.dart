@@ -5,8 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:islame_project_session_6/Presention/Moduels/Home_Moudel/Screens/Home/tabs/Settings/widget/ThemeButtonSheet.dart';
 
 import 'widget/langueButtomSheet.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 class Settings extends StatelessWidget {
   Settings({super.key});
 
@@ -18,7 +17,7 @@ class Settings extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(AppLocalizations.of(context)!.theme, style: Theme.of(context).textTheme.labelMedium),
+          Text('Theme', style: Theme.of(context).textTheme.labelMedium),
           SizedBox(height: 8),
           InkWell(
             onTap: (){
@@ -32,11 +31,11 @@ class Settings extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(color: Theme.of(context).dividerColor),
               ),
-              child: Text(AppLocalizations.of(context)!.light, style: Theme.of(context).textTheme.labelSmall),
+              child: Text('Light', style: Theme.of(context).textTheme.labelSmall),
             ),
           ),
           SizedBox(height: 16,),
-          Text(AppLocalizations.of(context)!.language, style: Theme.of(context).textTheme.labelMedium),
+          Text('Langue', style: Theme.of(context).textTheme.labelMedium),
           SizedBox(height: 8),
           InkWell(
             onTap: (){
@@ -50,7 +49,7 @@ class Settings extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(color: Theme.of(context).dividerColor),
               ),
-              child: Text(AppLocalizations.of(context)!.english, style: Theme.of(context).textTheme.labelSmall),
+              child: Text('English', style: Theme.of(context).textTheme.labelSmall),
             ),
           ),
         ],
@@ -58,10 +57,10 @@ class Settings extends StatelessWidget {
     );
   }
   void showThemeBottomSheet( BuildContext context){
-    showModalBottomSheet(context: context, builder:(context)=>ThemeBottomSheet());
+    showModalBottomSheet(context: context, builder:(context)=>ThemeButtonSheet());
 
   }
   void showButtomLanugeSheet(BuildContext context){
-    showModalBottomSheet(context: context, builder: (context)=>LanguageBottomSheet());
+    showBottomSheet(context: context, builder: (context)=>LangueButtomSheet());
   }
 }
