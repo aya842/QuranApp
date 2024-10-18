@@ -40,6 +40,7 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
         Icon(
           Icons.check,
           size: 28,
+          color: Colors.white,
         )
       ],
     );
