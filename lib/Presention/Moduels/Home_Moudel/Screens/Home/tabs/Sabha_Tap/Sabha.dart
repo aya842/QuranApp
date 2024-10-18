@@ -33,7 +33,7 @@ class _SabhaState extends State<Sabha> with SingleTickerProviderStateMixin {
     setState(() {
       tasbihCount += 1;
     });
-    _controller.forward(from: 0.0); // Reset animation and start rotating
+    _controller.forward(from: 0.0);
   }
 
   @override
@@ -47,7 +47,7 @@ class _SabhaState extends State<Sabha> with SingleTickerProviderStateMixin {
               alignment: Alignment.center, // Aligns elements at the center
               children: [
                 Positioned(
-                  top: 20, // Adjust to move the header up or down
+                  top: 20,
                   child: Image.asset(
                     AssestsImages.Sbha_Header,
                     width: MediaQuery.of(context).size.width * 0.2, // Adjusts the width relative to screen size
