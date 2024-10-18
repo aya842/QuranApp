@@ -1,5 +1,5 @@
-import 'dart:io' show Platform;
-import 'dart:math';
+
+
 import 'package:flutter/material.dart';
 import 'package:islame_project_session_6/Core/assests_manger.dart';
 import 'package:islame_project_session_6/Core/colors_manager.dart';
