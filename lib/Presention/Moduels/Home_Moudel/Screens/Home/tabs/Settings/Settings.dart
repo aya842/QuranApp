@@ -57,10 +57,10 @@ class Settings extends StatelessWidget {
     );
   }
   void showThemeBottomSheet( BuildContext context){
-    showModalBottomSheet(context: context, builder:(context)=>ThemeBottomSheet());
+    showModalBottomSheet(context: context, builder:(context)=>ThemeButtonSheet());
 
   }
   void showButtomLanugeSheet(BuildContext context){
-    showModalBottomSheet(context: context, builder: (context)=>LanguageBottomSheet());
+    showBottomSheet(context: context, builder: (context)=>LangueButtomSheet());
   }
 }
