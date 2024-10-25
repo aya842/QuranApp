@@ -61,6 +61,6 @@ class Settings extends StatelessWidget {
 
   }
   void showButtomLanugeSheet(BuildContext context){
-    showBottomSheet(context: context, builder: (context)=>LanguageBottomSheet());
+    showModalBottomSheet(context: context, builder: (context)=>LanguageBottomSheet());
   }
 }
