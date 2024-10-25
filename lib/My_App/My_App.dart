@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'package:islame_project_session_6/Core/route_manger.dart';
 import 'package:islame_project_session_6/Presention/Moduels/Home_Moudel/Screens/Home/Home_Screens.dart';
 import 'package:islame_project_session_6/Presention/Moduels/Home_Moudel/Screens/Quran_Details/Quran_Details.dart';
@@ -8,7 +8,8 @@ import 'package:islame_project_session_6/Presention/Moduels/Home_Moudel/Screens/
 import 'package:islame_project_session_6/config/Theme/My_Theme.dart';
 
 import '../Presention/Moduels/Home_Moudel/Screens/Hadith_Details/Hadith_Details.dart';
-
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class MyApp extends StatelessWidget {
  const MyApp({super.key});
 
@@ -25,16 +26,13 @@ class MyApp extends StatelessWidget {
         RouteManger.Hadith_DetailsScreen_route: (context) => HadithDetailsScreen()
       },
       initialRoute: RouteManger.Splashe_route,
-      localizationsDelegates: [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
+      localizationsDelegates:AppLocalizations.localizationsDelegates,
+
       supportedLocales: [
         Locale('en'), // English
-        Locale('es'), // Spanish
+        Locale('ar'), // Spanish
       ],
+      locale: Locale('en'),
     );
   }
 }

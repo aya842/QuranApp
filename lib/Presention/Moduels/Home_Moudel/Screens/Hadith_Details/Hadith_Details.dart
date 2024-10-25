@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../../Core/assests_manger.dart';
 import '../Home/tabs/Hadith/Headeath.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HadithDetailsScreen extends StatelessWidget {
   HadithDetailsScreen({super.key});
@@ -16,7 +18,7 @@ class HadithDetailsScreen extends StatelessWidget {
       )),
       child: Scaffold(
           appBar: AppBar(
-            title: Text('QuranApp'),
+            title: Text(AppLocalizations.of(context)!.appTitle),
           ),
           body: Card(
             child: SingleChildScrollView(

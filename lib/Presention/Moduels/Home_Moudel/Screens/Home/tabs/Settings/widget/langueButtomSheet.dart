@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class LanguageBottomSheet extends StatefulWidget {
   const LanguageBottomSheet({super.key});
 
@@ -16,11 +16,11 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          buildUnSelectedItemLangWidget('English'),
+          buildSelectedItemLangWidget(AppLocalizations.of(context)!.english,),
           SizedBox(
             height: 8,
           ),
-          buildUnSelectedItemLangWidget('العربيه'),
+          buildUnSelectedItemLangWidget(AppLocalizations.of(context)!.arabic),
         ],
       ),
     );
@@ -38,6 +38,7 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
         Icon(
           Icons.check,
           size: 28,
+          color: Colors.white,
         ),
       ],
     );
@@ -49,8 +50,8 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
       unSelectedLang,
       style: Theme.of(context)
           .textTheme
-          .displayMedium
-          ?.copyWith(color: Theme.of(context).colorScheme.secondary),
+          .titleMedium
+
     );
   }
 }

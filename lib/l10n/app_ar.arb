@@ -10,8 +10,9 @@
   "hadithHeader": "الأحاديث",
   "theme": "السمه",
   "light": "فاتح",
-  "dark": "داكن",
   "language": "اللغه",
+  "dark": "داكن",
   "english": "الانجليزيه",
-  "arabic": "العربيه"
+  "arabic": "العربيه",
+  "number-sbha": "عدد التسبيحات"
 }

@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ThemeBottomSheet extends StatefulWidget {
   const ThemeBottomSheet({super.key});
@@ -13,19 +13,25 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
   Widget build(BuildContext context) {
 
     return Container(
-      padding: EdgeInsets.all(12),
+
+      padding: EdgeInsets.all(20),
+       
       width: double.infinity,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
 
-              buildUnSelectedItemThemeWidget(
-                'Light'),
-          const SizedBox(
+              buildSelectedItemThemeWidget(
+                  AppLocalizations.of(context)!.light
+
+
+                ),
+          SizedBox(
             height: 8,
+
           ),
 
-               buildUnSelectedItemThemeWidget('Dark'
+               buildUnSelectedItemThemeWidget(AppLocalizations.of(context)!.dark
                   ),
         ],
       ),
@@ -34,9 +40,10 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
 
   Widget buildSelectedItemThemeWidget(String selectedTheme) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(selectedTheme, style: Theme.of(context).textTheme.displayMedium),
-        Spacer(),
+       // Spacer(),
         Icon(
           Icons.check,
           size: 28,
@@ -52,8 +59,8 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
         Text(unSelectedTheme,
             style: Theme.of(context)
                 .textTheme
-                .displayMedium
-                ?.copyWith(color: Theme.of(context).colorScheme.secondary)),
+                .titleMedium)
+
       ],
     );
   }
