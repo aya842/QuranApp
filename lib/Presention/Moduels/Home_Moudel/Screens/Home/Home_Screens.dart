@@ -8,8 +8,8 @@ import 'tabs/Quran_Tab/Quran.dart';
 import 'tabs/Radio_Tab/Radio.dart';
 import 'tabs/Sabha_Tap/Sabha.dart';
 import 'tabs/Settings/Settings.dart';
-
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
 
@@ -38,7 +38,8 @@ class _HomeScreenState extends State<HomeScreen> {
       )),
       child: Scaffold(
         // backgroundColor: Colors.transparent,
-        appBar: AppBar(title: const Text(StringsMangers.AppTitle)),
+        appBar: AppBar(
+            title: Text(AppLocalizations.of(context)!.appTitle)),
         bottomNavigationBar: BottomNavigationBar(
             currentIndex: Selected_Tap,
             // to make the selected tap
@@ -49,23 +50,23 @@ class _HomeScreenState extends State<HomeScreen> {
             type: BottomNavigationBarType.fixed,
             // know the difference between seftings
 
-            items: const [
+            items:  [
               BottomNavigationBarItem(
                   /////////
                   backgroundColor: colorsManger.gold_color,
                   icon: ImageIcon(AssetImage(AssestsImages.Quran_ICon)),
-                  label: StringsMangers.quranLabel),
+                  label:AppLocalizations.of(context)!.quranTab),
               BottomNavigationBarItem(
                   icon: ImageIcon(AssetImage(AssestsImages.Hadeeth_Icon)),
-                  label: StringsMangers.Hadeath_label),
+                  label: AppLocalizations.of(context)!.hadithTab),
               BottomNavigationBarItem(
                   icon: ImageIcon(AssetImage(AssestsImages.sebha_Icon)),
-                  label: StringsMangers.Sabha_Label),
+                  label:AppLocalizations.of(context)!.sebhaTab ),
               BottomNavigationBarItem(
                   icon: ImageIcon(AssetImage(AssestsImages.radio_Icon)),
-                  label: StringsMangers.radio_Label),
+                  label:AppLocalizations.of(context)!.radioTab ),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.settings), label: StringsMangers.Settings),
+                  icon: Icon(Icons.settings), label:AppLocalizations.of(context)!.sebhaTab ),
             ]),
         body: Taps[Selected_Tap],
       ),

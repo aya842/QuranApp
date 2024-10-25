@@ -4,14 +4,16 @@ import 'package:islame_project_session_6/Core/colors_manager.dart';
 class My_Theme {
 
   static ThemeData Light_theme = ThemeData(
+
     indicatorColor: Colors.white,
     primaryColor: colorsManger.gold_color,
       appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.transparent,
+         backgroundColor: Colors.transparent,
           centerTitle: true,
+          elevation: 0,
           titleTextStyle: TextStyle(
               fontWeight: FontWeight.w700, color: Colors.black, fontSize: 30),
-          iconTheme: IconThemeData(color: Colors.transparent)),
+          iconTheme: IconThemeData(color: Colors.white)),
       scaffoldBackgroundColor: Colors.transparent,
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: colorsManger.gold_color,
@@ -33,16 +35,18 @@ class My_Theme {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
       ),
       bottomSheetTheme:BottomSheetThemeData (
+
         elevation: 12,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(10),
+            topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
           ),
 
 
         ),
-        backgroundColor: colorsManger.gold_color
+        backgroundColor: colorsManger.gold_color.withOpacity(0.7),
+
 
       ),
       textTheme: const TextTheme(
