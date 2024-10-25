@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:islame_project_session_6/Core/assests_manger.dart';
 import 'package:islame_project_session_6/Core/colors_manager.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class Sabha extends StatefulWidget {
   const Sabha({super.key});
 
@@ -11,8 +11,16 @@ class Sabha extends StatefulWidget {
 }
 
 class _SabhaState extends State<Sabha> with SingleTickerProviderStateMixin {
+
+  List<String >Azkar=[
+    'سبحان الله',
+    ' الحمدلله',
+    ' الله اكبر'
+  ];
   late AnimationController _controller;
   int tasbihCount = 0;
+  int index=2;
+  double angle =0;
 
   @override
   void initState() {
@@ -29,15 +37,11 @@ class _SabhaState extends State<Sabha> with SingleTickerProviderStateMixin {
     super.dispose();
   }
 
-  void _incrementTasbih() {
-    setState(() {
-      tasbihCount += 1;
-    });
-    _controller.forward(from: 0.0); // Reset animation and start rotating
-  }
 
   @override
   Widget build(BuildContext context) {
+    var Localizations=AppLocalizations.of(context);
+
     return Scaffold(
       body: Column(
         children: [
@@ -47,7 +51,7 @@ class _SabhaState extends State<Sabha> with SingleTickerProviderStateMixin {
               alignment: Alignment.center, // Aligns elements at the center
               children: [
                 Positioned(
-                  top: 20, // Adjust to move the header up or down
+                  top: 20,
                   child: Image.asset(
                     AssestsImages.Sbha_Header,
                     width: MediaQuery.of(context).size.width * 0.2, // Adjusts the width relative to screen size
@@ -69,8 +73,8 @@ class _SabhaState extends State<Sabha> with SingleTickerProviderStateMixin {
             ),
           ),
 
-          const Text(
-            'عدد التسبيحات',
+          Text(
+            Localizations!.numbersbha,
             textAlign: TextAlign.center,
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
           ),
@@ -93,14 +97,35 @@ class _SabhaState extends State<Sabha> with SingleTickerProviderStateMixin {
             style: ElevatedButton.styleFrom(
               backgroundColor: colorsManger.gold_color, // Use your defined color
             ),
-            child: const Text(
-              'سبحان الله',
+            child: Text(
+              Azkar[index],
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
         ],
       ),
     );
+  }
+
+  void _incrementTasbih() {
+    if (tasbihCount<33){
+      tasbihCount += 1;
+    }
+    else{
+      tasbihCount=0;
+      index=0;
+      if (index==Azkar.length){
+        index=0;
+      }
+    }
+    setState(() {
+
+    });
+    _controller.forward(from: 0.0);
+  }
+  // the funcation of te chagne of the Azkar
+  onZeker(){
+    tasbihCount++;
   }
 }
 
